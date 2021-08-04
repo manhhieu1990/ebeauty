@@ -7,7 +7,6 @@ import ebeauty.com.springbootbackend.model.User;
 import ebeauty.com.springbootbackend.service.UserService;
 
 @Controller
-@RequestMapping(path="/api/v1")
 public class UserRestController {
 
 	private UserService userService;
@@ -22,5 +21,12 @@ public class UserRestController {
 		return theUser;
 	}
 	
-	
+	@RequestMapping(value="/addUser", method=RequestMethod.POST)
+	public String addUser(@ModelAttribute("user") User theUser) {
+		User user = userService.saveUser(theUser);
+		if(user != null) {
+			return "redirect:/";
+		}
+		return "Internal Server Error";
+	}
 }

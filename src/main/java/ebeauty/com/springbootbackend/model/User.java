@@ -19,35 +19,20 @@ public class User {
 	@Column(name="s_city")
 	private String city;
 	
-	@Column(name="s_state")
-	private String state;
+	@Column(name="s_province")
+	private String province;
 	
 	@Column(name="n_zipcode")
-	private Integer zipcode;
+	private String zipcode;
 	
-	@Column(name="d_create_date")
-	private Date createDate;
-	
-	@Column(name="d_updat_date")
-	private Date updateDate;
-	
-	@Column(name="d_dob")
-	private Date dob;
-	
-	@Column(name="s_email")
+    @Column(name="s_email")
 	private String email;
 	
 	@Column(name="n_phone")
-	private Integer phone;
+	private String phone;
 	
-	@Column(name="s_first_name")
-	private String firstName;
-	
-	@Column(name="s_last_name")
-	private String lastName;
-	
-	@Column(name="s_gender")
-	private String gender;
+	@Column(name="s_full_name")
+	private String fullName;
 	
 	@Column(name="s_password")
 	private String password;
@@ -57,23 +42,17 @@ public class User {
 	
 	public User() {}
 
-	public User(Long id, String address, String city, String state, Integer zipcode, Date createDate,
-			Date updateDate, Date dob, String email, Integer phone, String firstName, String lastName, String gender,
-			String password, String status) {
+	public User(Long id, String address, String city, String province, String zipcode, String email, String phone,
+			String fullName, String password, String status) {
 		super();
 		this.id = id;
 		this.address = address;
 		this.city = city;
-		this.state = state;
+		this.province = province;
 		this.zipcode = zipcode;
-		this.createDate = createDate;
-		this.updateDate = updateDate;
-		this.dob = dob;
 		this.email = email;
 		this.phone = phone;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.gender = gender;
+		this.fullName = fullName;
 		this.password = password;
 		this.status = status;
 	}
@@ -102,44 +81,20 @@ public class User {
 		this.city = city;
 	}
 
-	public String getState() {
-		return state;
+	public String getProvince() {
+		return province;
 	}
 
-	public void setState(String state) {
-		this.state = state;
+	public void setProvince(String province) {
+		this.province = province;
 	}
 
-	public Integer getZipcode() {
+	public String getZipcode() {
 		return zipcode;
 	}
 
-	public void setZipcode(Integer zipcode) {
+	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
-	}
-
-	public Date getCreateDate() {
-		return createDate;
-	}
-
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
-
-	public Date getUpdateDate() {
-		return updateDate;
-	}
-
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
-	}
-
-	public Date getDob() {
-		return dob;
-	}
-
-	public void setDob(Date dob) {
-		this.dob = dob;
 	}
 
 	public String getEmail() {
@@ -150,36 +105,20 @@ public class User {
 		this.email = email;
 	}
 
-	public Integer getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(Integer phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getPassword() {
@@ -196,15 +135,7 @@ public class User {
 
 	public void setStatus(String status) {
 		this.status = status;
-	};
-	
-	@PrePersist
-	protected void onCreate() {
-		createDate = new Date();
 	}
 
-	@PreUpdate
-	protected void onUpdate() {
-	  updateDate = new Date();
-	}
+	
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
 <head>
 <meta charset="ISO-8859-1">
 <title>e-Beauty Online Consulting</title>
- <link rel="icon" type="image/x-icon" href="assets/img/elogo.PNG" />
+ <link rel="icon" type="image/x-icon" href="img/elogo.PNG" />
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
   <!-- Google fonts-->
@@ -20,9 +20,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="expert.html">Be an Expert</a></li>
-                        <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
-                        <li class="nav-item" id="show-login" ><a class="nav-link" href="login.html" >Log In</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{expert-register}">Be an Expert</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{user-register}">Sign Up</a></li>
+                        <li class="nav-item" id="show-login" ><a class="nav-link" th:href="@{login}" >Log In</a></li>
 
                     </ul>
                 </div>
@@ -53,7 +53,7 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/makeup.jpg" alt="..." /></div>
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="img/makeup.jpg" alt="..." /></div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
@@ -69,7 +69,7 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/dressing.jpg" alt="..." /></div>
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="img/dressing.jpg" alt="..." /></div>
                     </div>
                     <div class="col-lg-6">
                         <div class="p-5">
@@ -85,7 +85,7 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/skin.PNG" alt="..." /></div>
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="img/skin.PNG" alt="..." /></div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
@@ -101,7 +101,7 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/hair.png" alt="..." /></div>
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="img/hair.png" alt="..." /></div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
